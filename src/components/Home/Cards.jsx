@@ -60,7 +60,7 @@ export default function Cards() {
               playStatus={
                 isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED
               }
-              playFromPosition={300 /* in milliseconds */}
+              playFromPosition={20 /* in milliseconds */}
             />
 
             <button
