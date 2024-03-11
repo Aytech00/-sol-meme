@@ -8,10 +8,13 @@ import img4 from "../../assets/giphy.gif";
 import Sound from 'react-sound'
 import tone from "../../assets/ring.mp3";
 import { useState } from "react";
+import { useSoundContx } from "../../store/SoundContx";
 
 export default function Cards() {
 
-    const [isPlaying, setIsPlaying] = useState(true)    
+       const {isPlaying, setIsPlaying} = useSoundContx()
+
+console.log(isPlaying);
   return (
     <div className="px-7  md:px-5 flex justify-center  py-10">
       <div className="grid md:gap-4  grid-cols-1 md:grid-cols-4  ">
@@ -34,24 +37,20 @@ export default function Cards() {
         </div>
 
         <div className=" col-span-1  md:col-span-2">
-          <button
-            onClick={() => setIsPlaying(!isPlaying)}
+         
+          {/* <button
+            onClick={() => setIsPlaying((prev)=> !prev)}
             className="w-full text-2xl md:text-3xl bg-yellow-300 py-3"
           >
             {!isPlaying ? "play nokia ring tone 🤳" : "stop ring tone"}
-          </button>
+          </button> */}
           <div className="mb-5">
             <img
               className=" md:w-full h-full mb-5  border-4 border-primary"
               src={gif3}
               alt=""
             />
-            {/* <iframe
-              className="w-full h-[1000px]"
-              src="https://www.youtube.com/embed/vN88QnHfA7A?si=OkNfdnqDl6hQxNev"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write;"
-            ></iframe> */}
+      
           </div>
 
           <div className="mb-5 md:mb-0">
@@ -60,15 +59,18 @@ export default function Cards() {
               playStatus={
                 isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED
               }
-              playFromPosition={20 /* in milliseconds */}
+              
+              playFromPosition={300 /* in milliseconds */}
             />
 
-            <button
+          {/* <audio src={tone} autoPlay={true}> </audio> */}
+
+            {/* <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="w-full text-2xl md:text-3xl bg-yellow-300 py-3"
             >
               {!isPlaying ? "play nokia ring tone" : "stop ring tone"}
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="col-span-1">

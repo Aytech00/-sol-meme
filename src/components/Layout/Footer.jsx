@@ -1,9 +1,9 @@
 
 export default function Footer() {
   return (
-    <div className="container  border-4 border-yellow-300 text-center py-5">
+    <div className="container bg-yellow-300 rounded-tl-3xl rounded-tr-3xl border-4 border-yellow-300 text-center py-5">
       <div>
-        <div className=" grid grid-cols-3 py-3 text-yellow-300">
+        <div className=" grid grid-cols-3 py-3 text-black">
           <p className="text-xl font-semibold">$nokia</p>
           <p className="text-xl font-semibold">$nokia</p>
           <p className="text-xl font-semibold">$nokia</p>
