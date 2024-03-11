@@ -60,7 +60,7 @@ console.log(isPlaying);
                 isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED
               }
               
-              playFromPosition={300 /* in milliseconds */}
+              playFromPosition={100 /* in milliseconds */}
             />
 
           {/* <audio src={tone} autoPlay={true}> </audio> */}
